@@ -9,13 +9,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // DATABASE
-mongoose.connect("mongodb://localhost:27017/waproject",
-{ useNewUrlParser: true, useUnifiedTopology: true, })
-  .then(() => {
-    app.listen(3000);
-    console.log("Sucesso, conectado ao MongoDB");
-  }
-);
+
+mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useCreateIndex: true
+});
+
+// mongoose.connect("mongodb://localhost:27017/waproject",
+// { useNewUrlParser: true, useUnifiedTopology: true, })
+//   .then(() => {
+//     app.listen(3000);
+//     console.log("Sucesso, conectado ao MongoDB");
+//   }
+// );
 
 const db = mongoose.connection;
 
