@@ -49,14 +49,22 @@ process.on('SIGINT', () => {
 });
 
 // Load Models
-// const Mentions = require('./models/mentions');
+const Lab = require('./models/laboratory');
+const Exam = require('./models/exam');
+const Association = require('./models/association');
 
 // Load Routes
-// const indexRoutes = require('./routes/index-routes');
-// app.use('/', indexRoutes);
+const indexRoutes = require('./routes/index');
+app.use('/', indexRoutes);
 
-// const mentionsRoutes = require('./routes/mentions-routes');
-// app.use('/mentions', mentionsRoutes);
+const laboratoryRoutes = require('./routes/laboratory-routes');
+app.use('/laboratory', laboratoryRoutes);
+
+const examRoutes = require('./routes/exam-routes');
+app.use('/exam', examRoutes);
+
+const associationRoutes = require('./routes/association-routes');
+app.use('/association', associationRoutes);
 
 
 module.exports = app;
