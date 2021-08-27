@@ -5,6 +5,8 @@ const examController = require('../controllers/exam-controller');
 
 router.get('/', examController.listExams);
 
+router.get('/:nome', examController.findbyName);
+
 router.post('/', examController.createExam);
 
 router.put('/:id', examController.updateExam);

@@ -12,6 +12,18 @@ exports.listExams = async (req, res) => {
   }
 };
 
+// Find by Name and return lab's association
+exports.findbyName = async (req, res) => {
+  try {
+    const data = await repository.findbyName(req.params.nome);
+    res.status(200).send(data);
+  } catch (error) {
+    res.status(500).send({
+      message: 'Falha ao carregar os laboratorios pertencente ao exame.'
+    });
+  }
+};
+
 // CREATE
 exports.createExam = async (req, res) => {
   try {

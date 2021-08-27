@@ -7,7 +7,7 @@ exports.createAssociation = async (req, res) => {
       req.body.id_exame,
       req.body.id_laboratorio
     );
-    res.status(201).send({
+    res.status(200).send({
       message: 'Associação criada com sucesso!'
     })
   } catch (error) {
@@ -23,7 +23,7 @@ exports.deleteAssociation = async (req, res) => {
       req.body.id_exame,
       req.body.id_laboratorio
     );
-    res.status(201).send({
+    res.status(200).send({
       message: 'Associação excluida com sucesso!'
     })
   } catch (error) {
