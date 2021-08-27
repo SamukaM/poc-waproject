@@ -9,6 +9,7 @@ Projeto:.
 |   .gitignore
 |   docker-compose.yaml
 |   Dockerfile
+|   Documentacao.md
 |   package-lock.json
 |   package.json
 |
