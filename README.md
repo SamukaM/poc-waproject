@@ -43,7 +43,7 @@ Projeto:.
 ---
 ## Instruções de Uso:
 
-Para iniciar, é necessario instanciar os containers do docker-compose. Para isso basta entrar na pasta do projeto pelo terminal e executar o comando:
+Para iniciar, é necessario ter o docker em sua maquina, para instanciar os containers do docker-compose. Para isso basta entrar na pasta do projeto pelo terminal e executar o comando:
 
 ```CMD
 docker-compose up --build
